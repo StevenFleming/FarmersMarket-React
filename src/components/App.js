@@ -23,7 +23,9 @@ class App extends React.Component {
         <Header />
         <hr />
         <div id="content">
-          <LocationControl className="test" todayInt={this.state.todayInt} />
+          <div class="test">
+            <LocationControl todayInt={this.state.todayInt} />
+          </div>
           <ProduceControl monthInt={this.state.monthInt} />
           <TimeStamp today={this.state.today} />
           {/* <SeasonalImage /> */}
