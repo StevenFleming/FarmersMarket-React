@@ -1,4 +1,13 @@
-.App {
+#content {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  border: 5px solid green;
+}
+
+.test {
+  border: 5px solid blue;
+}
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +44,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
