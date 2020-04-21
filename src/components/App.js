@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import LocationControl from "./Location/LocationControl";
-// import ProduceControl from "./Produce/ProduceControl";
-// import Timestamp from "./Timestamp";
+import ProduceControl from "./Produce/ProduceControl";
+import TimeStamp from "./Timestamp";
 // import SeasonalImage from "./SeasonalImage";
 
 class App extends React.Component {
@@ -13,28 +13,21 @@ class App extends React.Component {
     this.state = {
       today: currentDate, // Tue Apr 21 2020
       todayInt: currentDate.getDay(),
+      monthInt: currentDate.getMonth(),
     };
     // console.log(this.state.todayInt);
   }
 
-  // getInfo = () => {
-  //   this.setState({
-  //     todayInt: 3,
-  //   });
-  // };
-
   render() {
-    // this.getInfo();
-    // console.log(this.state.todayInt);
     return (
       <React.Fragment>
         <Header />
         <hr />
         <h1>{this.state.todayInt.toString()}</h1>
         <LocationControl todayInt={this.state.todayInt} />
-        {/* <ProduceControl />
-        <Timestamp />
-        <SeasonalImage /> */}
+        <ProduceControl monthInt={this.state.monthInt} />
+        <TimeStamp today={this.state.today} />
+        {/* <SeasonalImage /> */}
       </React.Fragment>
     );
   }
