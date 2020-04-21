@@ -1,17 +1,23 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function LocationInfo(props) {
-  // props.day == this.today.getDay() aka Tuesday
-  // display the properties of the masterLocation Obj that coresponds to Tuesday
   return (
     <React.Fragment>
-      <h4>{props.day}</h4>
-      <p>{props.hours}</p>
-      <p>{props.location}</p>
-      <p>{props.booth}</p>
+      <h4>Current Day: {props.day}</h4>
+      <p>Market Hours: {props.hours}</p>
+      <p>Location: {props.location}</p>
+      <p>Booth: {props.booth}</p>
       <hr />
     </React.Fragment>
   );
 }
+
+LocationInfo.propTypes = {
+  day: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  hours: PropTypes.string.isRequired,
+  booth: PropTypes.string.isRequired,
+};
 
 export default LocationInfo;
