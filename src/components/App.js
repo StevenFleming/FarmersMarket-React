@@ -17,17 +17,53 @@ class App extends React.Component {
     };
   }
 
+  handleTomorrowCheck = () => {
+    if (this.state.todayInt === 6) {
+      this.setState({ todayInt: 0 })
+    } else {
+      this.setState({ todayInt: this.state.todayInt + 1 });
+    }
+  }
+
+  handleYesterdayCheck = () => {
+    if (this.state.todayInt === 0) {
+      this.setState({ todayInt: 6 })
+    } else {
+      this.setState({ todayInt: this.state.todayInt - 1 });
+    }
+  }
+
+  handleNextMonthCheck = () => {
+    if (this.state.monthInt === 11) {
+      this.setState({ monthInt: 0 })
+    } else {
+      this.setState({ monthInt: this.state.monthInt + 1 });
+    }
+  }
+
+  handleLastMonthCheck = () => {
+    if (this.state.monthInt === 0) {
+      this.setState({ monthInt: 11 })
+    } else {
+      this.setState({ monthInt: this.state.monthInt - 1 });
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
         <Header />
         <hr />
         <div id="content">
-          <div class="test">
-            <LocationControl todayInt={this.state.todayInt} />
+          <div>
+            <LocationControl todayInt={this.state.todayInt} onYesterdayClick={this.handleYesterdayCheck} onTomorrowClick={this.handleTomorrowCheck} />
           </div>
-          <ProduceControl monthInt={this.state.monthInt} />
-          <TimeStamp today={this.state.today} />
+          <div>
+            <ProduceControl monthInt={this.state.monthInt} onNextMonthClick={this.handleNextMonthCheck} onLastMonthClick={this.handleLastMonthCheck} />
+          </div>
+          <div>
+            <TimeStamp today={this.state.today} />
+          </div>
           {/* <SeasonalImage /> */}
         </div>
       </React.Fragment>

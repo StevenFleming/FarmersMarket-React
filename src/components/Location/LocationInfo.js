@@ -8,7 +8,6 @@ function LocationInfo(props) {
       <p>Market Hours: {props.hours}</p>
       <p>Location: {props.location}</p>
       <p>Booth: {props.booth}</p>
-      <hr />
     </React.Fragment>
   );
 }

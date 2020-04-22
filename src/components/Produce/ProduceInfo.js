@@ -10,7 +10,6 @@ function ProduceInfo(props) {
           <li>{produce}</li>
         ))}
       </ul>
-      <hr />
     </React.Fragment>
   );
 }

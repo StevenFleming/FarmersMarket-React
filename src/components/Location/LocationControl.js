@@ -33,6 +33,12 @@ const masterLocationInfo = [
     booth: "6D",
   },
   {
+    day: "Friday",
+    location: "N/A",
+    hours: "CLOSED",
+    booth: "N/A",
+  },
+  {
     day: "Saturday",
     location: "Beaverton",
     hours: "10:00am - 1:30pm",
@@ -44,6 +50,8 @@ function LocationControl(props) {
   let currentlyVisibleState = masterLocationInfo[props.todayInt];
   return (
     <React.Fragment>
+      <button onClick={props.onYesterdayClick}>See Yesterday's location</button>
+      <button onClick={props.onTomorrowClick}>See Tomorrow's location</button>
       <LocationInfo
         day={currentlyVisibleState.day}
         location={currentlyVisibleState.location}

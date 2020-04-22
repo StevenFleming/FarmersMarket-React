@@ -1,12 +1,13 @@
 #content {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
-  border: 5px solid green;
+  /* border: 5px solid green; */
 }
 
-.test {
+/* .test {
   border: 5px solid blue;
-}
+} */
+
 /* .App {
   text-align: center;
 }

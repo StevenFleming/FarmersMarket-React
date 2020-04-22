@@ -22,11 +22,11 @@ This is a web application to practice React fundamental concepts.
 
 Sample layout:
 
-<img style="width:600px" src="./src/components/images/sample-layout.png">
+<img style="width:600px" src="./src/images/sample-layout.png">
 
 Component Diagram:
 
-<img style="width:600px" src="./src/components/images/component-diagram.png">
+<img style="width:600px" src="./src/images/component-diagram.png/">
 
 ## Known Bugs
 

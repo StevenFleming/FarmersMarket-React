@@ -252,6 +252,7 @@ const masterProduceInfo = [
       "Turnips",
     ],
   },
+
   {
     month: "December",
     selection: [
@@ -270,10 +271,14 @@ const masterProduceInfo = [
   },
 ];
 
+
+
 function ProduceControl(props) {
   let currentlyVisibleState = masterProduceInfo[props.monthInt];
   return (
     <React.Fragment>
+      <button onClick={props.onNextMonthClick}>See Next Months Produce</button>
+      <button onClick={props.onLastMonthClick}>See Last Months Produce</button>
       <ProduceInfo
         month={currentlyVisibleState.month}
         selection={currentlyVisibleState.selection}
