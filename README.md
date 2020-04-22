@@ -2,7 +2,7 @@
 
 # Farmer's Market
 
-#### React Fundamentals Exercise for [Epicodus](https://www.epicodus.com/), 04.21.2020
+#### React Fundamentals Exercise for [Epicodus](https://www.epicodus.com/), 04.21.2020 - 04.22.2020
 
 #### By **Adela Darmansyah and Steven Fleming**
 
@@ -26,7 +26,7 @@ Sample layout:
 
 Component Diagram:
 
-<img style="width:600px" src="./src/images/component-diagram.png/">
+<img style="width:600px" src="./src/images/component-diagram.png">
 
 ## Known Bugs
 
